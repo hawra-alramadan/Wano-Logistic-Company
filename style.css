@@ -298,3 +298,40 @@ font-family: var(--ff-primary);
  }
 
 
+/*------ The social media icon bar ------*/
+
+
+.menu-social{
+ position: fixed;
+ top: 50%;
+ -webkit-transform: translateY(-50%);
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+ z-index: 1000;
+}
+
+.menu-social li{
+ padding: var(--size-300);
+ text-align: center;
+}
+
+.menu-social li:hover {
+    background-color: var(--clr-ntural-300);
+  }
+
+.facebook {
+  background: var(--clr-accent-900);
+}
+
+.whatsapp {
+  background: var(--clr-accent-400);
+}
+
+.linkedin {
+  background: var(--clr-accent-800);
+}
+
+.instagram  {
+  background: var(--clr-accent-500);
+}
+
