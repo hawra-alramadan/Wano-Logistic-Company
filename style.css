@@ -240,13 +240,107 @@ font-family: var(--ff-primary);
 .fs-800{font-size: var(--fs-800);}
 .fs-900{font-size: var(--fs-900);}
 
+.padding-block-100{padding: var(--size-100);}
+
+.padding-block-200{padding: var(--size-200);}
+
+.padding-block-300{padding: var(--size-300);}
+
+.padding-block-400{padding: var(--size-400);}
+
+.padding-block-500{padding: var(--size-500);}
+
+.padding-block-700{padding: var(--size-700);}
+
+.padding-block-800{padding: var(--size-800);}
+
+.padding-block-900{padding: var(--size-900);}
+
+
 .container {
-    --max-width: 1400px;
-    --padding: 1rem;
-  
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
-     margin-inline: auto;
-   }
+  --max-width: 1092px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+   /*-- buttons --*/
+
+.get_btn{
+  font-size: 1rem;
+background: #ffffff;
+color: #18a035;
+padding: 14px 20px;
+border-radius: 6.25rem;
+overflow: hidden;
+}
+
+.get_btn:hover{
+color: #ffffff;
+
+}
+
+.hvr-bounce-to-top{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+
+}
+
+.hvr-bounce-to-top::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #18a035;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-top:hover::before, .hvr-bounce-to-top:focus::before, .hvr-bounce-to-top:active::before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.sim-btn{
+background: #29a9e0  ;
+color: #ffffff;
+padding: 14px 20px;
+border-radius: 6.25rem;
+overflow: hidden;
+border: none;
+  text-align: center;
+margin-right: auto;
+margin-left: auto;
+margin-top: 0px;
+cursor: pointer;
+}
+
+.sim-btn:hover{
+color: #ffffff;
+}
 
  /* navigation */
  
@@ -294,7 +388,7 @@ font-family: var(--ff-primary);
  
  
  .logo{
-     width: 190px;
+     width: 11.875rem;
  }
 
 
@@ -334,4 +428,23 @@ font-family: var(--ff-primary);
 .instagram  {
   background: var(--clr-accent-500);
 }
+
+
+/*------ wrapper ------*/
+
+.wrapper{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0,0.1)),
+    url('images/logistic-company-background.jpg');
+    height: 46.1875rem;
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+	padding: 0 var(--size-700);
+    color: var(--clr-ntural-100);
+
+}
+
 
