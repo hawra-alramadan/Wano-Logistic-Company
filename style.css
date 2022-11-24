@@ -47,6 +47,8 @@
       --size-700: 2rem;/*32*/
       --size-800: 3rem;/*48*/
       --size-900: 4rem;/*64*/
+      --size-950: 6.25rem;/*100*/
+      --size-1000: 12.5rem;/*200*/
 
 
     --fs-body: var(--fs-200);
@@ -56,7 +58,7 @@
     --fs-fourth-heading: var(--fs-400);
 
     --fs-nav: var(--fs-200);
-    --fs-button: var(--fs-200);
+    --fs-button: var(--fs-400);
 
 }
 
@@ -87,12 +89,15 @@ html:focus-within {
  html,
  body {
     height: 100%;
+    font-size: 16px;
  }
 
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
 }
 
 /* A elements that don't have a class get default styles */
@@ -108,6 +113,17 @@ svg {
   display: block;
 }
 
+h1,
+ h2,h3,
+ h4,h5,h6 {
+  font-family: var(--ff-heading);
+  text-transform: capitalize;
+  font-weight: var(--fw-b);
+}
+
+a{
+  text-decoration: none;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -265,19 +281,30 @@ font-family: var(--ff-primary);
   margin-inline: auto;
 }
 
+.message-box h2{
+  color: var(--clr-accent-400);
+  font-size: var(--fs-secondary-heading);
+
+}
+
+h5{
+  font-size: var(--fs-fourth-heading);
+}
+
    /*-- buttons --*/
 
 .get_btn{
-  font-size: 1rem;
-background: #ffffff;
-color: #18a035;
+font-size: var(--fs-button);
+font-family: var(--ff-btn);
+background: var(--clr-ntural-100);
+color: var(--clr-accent-400);
 padding: 14px 20px;
-border-radius: 6.25rem;
+border-radius: var(--size-950);
 overflow: hidden;
 }
 
 .get_btn:hover{
-color: #ffffff;
+color: var(--clr-ntural-100);
 
 }
 
@@ -304,7 +331,7 @@ color: #ffffff;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #18a035;
+    background: var(--clr-accent-400);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
@@ -325,10 +352,10 @@ color: #ffffff;
 }
 
 .sim-btn{
-background: #29a9e0  ;
-color: #ffffff;
+background: var(--clr-secondary-400) ;
+color: var(--clr-ntural-100);
 padding: 14px 20px;
-border-radius: 6.25rem;
+border-radius: var(--size-950);
 overflow: hidden;
 border: none;
   text-align: center;
@@ -339,7 +366,7 @@ cursor: pointer;
 }
 
 .sim-btn:hover{
-color: #ffffff;
+color:var(--clr-ntural-100);
 }
 
  /* navigation */
@@ -447,4 +474,132 @@ color: #ffffff;
 
 }
 
+
+/*------ services------*/
+
+.service .message-box{  
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+   align-items: center;
+}
+
+.service_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.service_container .box {
+  margin: 1.5rem 0.625rem;
+  min-width: var(--size-1000);
+  width: 15.625rem;
+}
+
+.img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: var(--size-1000);
+  background-color: var(--clr-ntural-100);
+  border-radius: var(--size-300);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.img-box img {
+  width: var(--size-1000);
+  height: var(--size-1000);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.detail-box {
+  margin-top: var(--size-400);
+}
+
+.detail-box p{
+  color:var(--clr-ntural-300);
+}
+
+.box:hover .img-box {
+  background-color: var(--clr-accent-400);
+}
+
+.box:hover .img-box img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+/*------ uplode file ------*/
+
+ .file-wrapper{
+   width:100%;
+   margin:auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.upload-btn-wrapper{
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+   cursor: pointer;
+}
+.upload-file{
+   border:2px dashed #eee;
+   color:#9b9b9b;
+   background-color: var(--clr-ntural-100);
+   width: 21.876rem;;
+   height:var(--size-1000);
+   border-radius: var(--size-200);
+   font-size:15px;
+   cursor: pointer;
+}
+.upload-btn-wrapper input[type=file]{
+   width:100%;
+   position: absolute;
+   left:0;
+   right:0;
+   top:0;
+   opacity: 0;
+   cursor: pointer;
+   min-height: 18.75rem;
+}
+.success-uploaded{
+   display:none;
+}
+.success-uploaded i{
+   font-size:var(--fs-600);
+   margin-left:6px;
+   margin-top:10px;
+   color: var(--clr-accent-400)
+}
+
+.d-block{
+   display: block;
+}
+.btn .upload-file{
+   font-size:var(--fs-200);
+}
+.upload-btn{
+   display: block;
+   font-size:var(--fs-300);
+   color: var(--clr-accent-400);
+}
+
+
+
+
+  
 
