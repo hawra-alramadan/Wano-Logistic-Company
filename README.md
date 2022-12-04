@@ -9,8 +9,7 @@
 ![](Screenshot.png)
 
 
-## LIVE DEMO.[TRY NOW](https://hawra-alramadan.github.io/Wano-Logistic-Company
-/) ♥
+## LIVE DEMO.[TRY NOW](https://hawra-alramadan.github.io/Wano-Logistic-Company/) ♥
 
 
 ## Features
