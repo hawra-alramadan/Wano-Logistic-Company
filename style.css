@@ -549,7 +549,7 @@ text-decoration: none;
 /*------ uplode file ------*/
 
  .file-wrapper{
-   width:100%;
+   width:22rem;
    margin:auto;
    display: flex;
    align-items: center;
@@ -565,7 +565,7 @@ text-decoration: none;
    border:2px dashed #eee;
    color:#9b9b9b;
    background-color: var(--clr-ntural-100);
-   width: 21.876rem;;
+   min-width: 19rem;
    height:var(--size-1000);
    border-radius: var(--size-200);
    font-size:15px;
@@ -759,6 +759,10 @@ font-weight: 300;
 
 
 @media screen and (max-width:50em){
+  .padding-block-700{padding: var(--size-600);}
+
+  .padding-block-800{padding: var(--size-700);}
+  
   .navbar{
       background-color:var(--clr-ntural-100);
       padding: var(--size-250);
@@ -830,6 +834,9 @@ h2{
 
 
 @media screen and (max-width:700px){
+  .upload-file{
+    min-width: 17rem;
+ }
       .menu-social{
       position: fixed;
       bottom: 0;
@@ -852,7 +859,6 @@ h2{
       margin: 0;
       letter-spacing: 0.2rem;
       }
-
       footer{
         margin-bottom: var(--size-800);
       }

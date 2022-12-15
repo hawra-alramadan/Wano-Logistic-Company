@@ -29,3 +29,15 @@ function scrollFunction() {
   }
 }
 // DOMContentLoaded  end
+
+$("#selectfile").bind('change',function(){
+  var filename = $("#selectfile").val();
+  if(/^s*$/.test(filename)){
+      $("#blankFile").text("No File Chosen..");
+      $(".success-uploaded").hide();
+  }else{
+      $("#blankFile").text(filename.replace("C:\\",""));
+      $(".success-uploaded").show();
+  }
+}) 
+// DOMContentLoaded  end
